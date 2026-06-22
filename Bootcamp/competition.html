@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modern Space Illustration</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ececec;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+}
+
+/* CARD */
+
+.scene{
+    position:relative;
+    width:820px;
+    height:520px;
+    border-radius:36px;
+    overflow:hidden;
+    background:linear-gradient(180deg,#25114a 0%, #140822 100%);
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.25),
+        0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* BOTTOM GLOW */
+
+.scene::before{
+    content:"";
+    position:absolute;
+    width:520px;
+    height:220px;
+    left:50%;
+    bottom:-100px;
+    transform:translateX(-50%);
+    background:radial-gradient(circle,
+        rgba(183,100,255,0.45) 0%,
+        rgba(183,100,255,0.18) 40%,
+        transparent 75%);
+    filter:blur(10px);
+}
+
+/* ROBOT */
+
+.robot{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:5;
+}
+
+/* HEAD */
+
+.head{
+    position:relative;
+    width:145px;
+    height:145px;
+    border-radius:38px;
+    background:linear-gradient(180deg,#b8ffe9 0%, #7ff0cf 100%);
+    box-shadow:
+        0 15px 25px rgba(0,0,0,0.22),
+        inset 0 4px 8px rgba(255,255,255,0.45);
+}
+
+/* ANTENNA */
+
+.antenna{
+    position:absolute;
+    width:4px;
+    height:42px;
+    background:#d6d6d6;
+    top:-38px;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:10px;
+}
+
+.antenna::before{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#ff6bdc;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    box-shadow:
+        0 0 12px #ff6bdc,
+        0 0 30px #ff6bdc;
+}
+
+/* FACE */
+
+.eye{
+    position:absolute;
+    width:16px;
+    height:38px;
+    background:#1b1b1b;
+    border-radius:20px;
+    top:48px;
+}
+
+.eye.left{
+    left:42px;
+}
+
+.eye.right{
+    right:42px;
+}
+
+.mouth{
+    position:absolute;
+    width:42px;
+    height:20px;
+    border-bottom:5px solid #1b1b1b;
+    border-radius:0 0 50px 50px;
+    bottom:34px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* SMALL ATTACHMENT */
+
+.attachment{
+    position:absolute;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#d9d9d9;
+    bottom:-56px;
+    left:50%;
+    transform:translateX(-50%);
+    box-shadow:
+        inset 0 3px 5px rgba(255,255,255,0.5),
+        0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* ORBIT */
+
+.orbit{
+    position:absolute;
+    width:360px;
+    height:220px;
+    border:2px solid rgba(255,255,255,0.2);
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-18deg);
+}
+
+/* PLANETS */
+
+.planet{
+    position:absolute;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#ff6bdc;
+    box-shadow:
+        0 0 12px #ff6bdc,
+        0 0 25px rgba(255,107,220,0.8);
+}
+
+.planet.one{
+    top:18px;
+    left:75px;
+}
+
+.planet.two{
+    right:58px;
+    bottom:22px;
+}
+
+/* MOON */
+
+.moon{
+    position:absolute;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#ffd95a;
+    top:55px;
+    right:85px;
+    box-shadow:
+        0 0 20px rgba(255,217,90,0.5);
+}
+
+.moon::after{
+    content:"";
+    position:absolute;
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    background:#241046;
+    top:2px;
+    left:16px;
+}
+
+/* STARS */
+
+.star-dot{
+    position:absolute;
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:#ffe67c;
+    box-shadow:0 0 8px currentColor;
+}
+
+.star-dot.pink{
+    background:#ff8ce9;
+}
+
+/* 4 POINT STARS */
+
+.star{
+    position:absolute;
+    width:14px;
+    height:14px;
+}
+
+.star::before,
+.star::after{
+    content:"";
+    position:absolute;
+    background:currentColor;
+    border-radius:10px;
+    box-shadow:0 0 10px currentColor;
+}
+
+.star::before{
+    width:2px;
+    height:14px;
+    left:6px;
+}
+
+.star::after{
+    width:14px;
+    height:2px;
+    top:6px;
+}
+
+.yellow{
+    color:#ffe67c;
+}
+
+.pink{
+    color:#ff8ce9;
+}
+
+/* STAR POSITIONS */
+
+.s1{ top:70px; left:110px; }
+.s2{ top:120px; left:240px; }
+.s3{ top:90px; right:240px; }
+.s4{ bottom:120px; left:150px; }
+.s5{ bottom:85px; right:190px; }
+.s6{ top:180px; right:120px; }
+
+.d1{ top:85px; left:420px; }
+.d2{ top:160px; left:90px; }
+.d3{ top:210px; right:210px; }
+.d4{ bottom:150px; right:110px; }
+.d5{ bottom:95px; left:280px; }
+.d6{ top:250px; left:180px; }
+
+</style>
+</head>
+
+<body>
+
+<div class="scene">
+
+    <!-- MOON -->
+    <div class="moon"></div>
+
+    <!-- ORBIT -->
+    <div class="orbit">
+        <div class="planet one"></div>
+        <div class="planet two"></div>
+    </div>
+
+    <!-- ROBOT -->
+    <div class="robot">
+
+        <div class="head">
+
+            <div class="antenna"></div>
+
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+
+            <div class="mouth"></div>
+
+        </div>
+
+        <div class="attachment"></div>
+
+    </div>
+
+    <!-- STARS -->
+    <div class="star yellow s1"></div>
+    <div class="star pink s2"></div>
+    <div class="star yellow s3"></div>
+    <div class="star pink s4"></div>
+    <div class="star yellow s5"></div>
+    <div class="star pink s6"></div>
+
+    <div class="star-dot d1"></div>
+    <div class="star-dot pink d2"></div>
+    <div class="star-dot d3"></div>
+    <div class="star-dot pink d4"></div>
+    <div class="star-dot d5"></div>
+    <div class="star-dot pink d6"></div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Rush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="question-section">
+        <div id="theme">
+            <button id="light-dark">🌙</button>
+        </div>
+        <div class="quiz-card">
+
+            <h2 id="quiz-heading">Ready? Let's test your brain...</h2>
+
+            <div id="quiz">
+                <p id="ques-completed">Question 1/10</p>
+                <p id="timer">Time : 10 s</p>
+            </div>
+            
+            <h2 id="question">Question is loading...</h2>
+
+            <div id="options">
+                <button class="option">Option 1</button>
+                <button class="option">Option 2</button>
+                <button class="option">Option 3</button>
+                <button class="option">Option 4</button>
+
+            </div>
+
+            <p id="message"></p>
+
+            <button id="next-btn">Next</button>
+
+            <div id="result" style="display: none;">
+                <h2>Your Score: <span id="score"></span></h2>
+                <!-- <button onclick="location.reload()">Play Again</button> -->
+            </div>
+
+        </div>
+    </section>
+    <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Night Landscape</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e5e5e5;
+    font-family:sans-serif;
+}
+
+.card{
+    width:900px;
+    height:500px;
+    background:#06183f;
+    border-radius:24px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.15),
+        0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* ---------- Stars ---------- */
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+}
+
+.s1{top:40px;left:80px;}
+.s2{top:70px;left:160px;}
+.s3{top:120px;left:100px;}
+.s4{top:90px;left:280px;}
+.s5{top:50px;left:380px;}
+.s6{top:130px;left:430px;}
+.s7{top:80px;left:520px;}
+.s8{top:40px;left:620px;}
+.s9{top:120px;left:720px;}
+.s10{top:70px;left:800px;}
+.s11{top:180px;left:60px;}
+.s12{top:210px;left:180px;}
+.s13{top:170px;left:320px;}
+.s14{top:220px;left:470px;}
+.s15{top:180px;left:640px;}
+.s16{top:210px;left:780px;}
+.s17{top:150px;left:860px;}
+.s18{top:140px;left:560px;}
+.s19{top:100px;left:690px;}
+.s20{top:160px;left:240px;}
+
+/* ---------- Moon ---------- */
+
+.moon{
+    position:absolute;
+    top:40px;
+    right:50px;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#fff;
+}
+
+.moon::after{
+    content:"";
+    position:absolute;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#06183f;
+    top:2px;
+    left:10px;
+}
+
+/* ---------- Sun Glow ---------- */
+
+.sun-glow{
+    position:absolute;
+    width:260px;
+    height:260px;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:95px;
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,180,70,.55) 0%,
+            rgba(255,180,70,.25) 45%,
+            rgba(255,180,70,0) 75%
+        );
+}
+
+/* ---------- Rings ---------- */
+
+.ring{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    border:1px solid rgba(255,185,90,.22);
+    border-radius:50%;
+}
+
+.r1{
+    width:150px;
+    height:150px;
+    bottom:105px;
+}
+
+.r2{
+    width:210px;
+    height:210px;
+    bottom:75px;
+}
+
+.r3{
+    width:270px;
+    height:270px;
+    bottom:45px;
+}
+
+/* ---------- Sun ---------- */
+
+.sun{
+    position:absolute;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:110px;
+    background:#f8b437;
+}
+
+/* ---------- Mountains ---------- */
+
+.mountain{
+    position:absolute;
+    bottom:0;
+    width:0;
+    height:0;
+}
+
+/* Left small */
+.m1{
+    left:0;
+    border-left:110px solid transparent;
+    border-right:110px solid transparent;
+    border-bottom:180px solid #07132f;
+}
+
+/* Left medium */
+.m2{
+    left:110px;
+    border-left:150px solid transparent;
+    border-right:150px solid transparent;
+    border-bottom:250px solid #08152f;
+}
+
+.m2::before{
+    content:"";
+    position:absolute;
+    left:-150px;
+    top:0;
+    width:0;
+    height:0;
+    border-left:150px solid transparent;
+    border-bottom:250px solid #11254f;
+}
+
+/* Center large */
+.m3{
+    left:280px;
+    border-left:190px solid transparent;
+    border-right:190px solid transparent;
+    border-bottom:320px solid #061028;
+    z-index:5;
+}
+
+.m3::before{
+    content:"";
+    position:absolute;
+    left:-190px;
+    top:0;
+    width:0;
+    height:0;
+    border-left:190px solid transparent;
+    border-bottom:320px solid #152c59;
+}
+
+/* Right medium */
+.m4{
+    right:110px;
+    border-left:150px solid transparent;
+    border-right:150px solid transparent;
+    border-bottom:250px solid #08152f;
+}
+
+.m4::before{
+    content:"";
+    position:absolute;
+    left:-150px;
+    top:0;
+    width:0;
+    height:0;
+    border-left:150px solid transparent;
+    border-bottom:250px solid #11254f;
+}
+
+/* Right small */
+.m5{
+    right:0;
+    border-left:110px solid transparent;
+    border-right:110px solid transparent;
+    border-bottom:180px solid #07132f;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <!-- Stars -->
+    <div class="star s1"></div>
+    <div class="star s2"></div>
+    <div class="star s3"></div>
+    <div class="star s4"></div>
+    <div class="star s5"></div>
+    <div class="star s6"></div>
+    <div class="star s7"></div>
+    <div class="star s8"></div>
+    <div class="star s9"></div>
+    <div class="star s10"></div>
+    <div class="star s11"></div>
+    <div class="star s12"></div>
+    <div class="star s13"></div>
+    <div class="star s14"></div>
+    <div class="star s15"></div>
+    <div class="star s16"></div>
+    <div class="star s17"></div>
+    <div class="star s18"></div>
+    <div class="star s19"></div>
+    <div class="star s20"></div>
+
+    <!-- Moon -->
+    <div class="moon"></div>
+
+    <!-- Sun -->
+    <div class="sun-glow"></div>
+    <div class="ring r3"></div>
+    <div class="ring r2"></div>
+    <div class="ring r1"></div>
+    <div class="sun"></div>
+
+    <!-- Mountains -->
+    <div class="mountain m1"></div>
+    <div class="mountain m2"></div>
+    <div class="mountain m4"></div>
+    <div class="mountain m5"></div>
+    <div class="mountain m3"></div>
+
+</div>
+
+</body>
+</html>

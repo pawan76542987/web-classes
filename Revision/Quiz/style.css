@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fcf7fb;
+}
+img {
+    height: 5rem;
+    width: 6rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+#important {
+    text-align: center;
+}
+#description {
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.selection {
+    margin-top: 3rem;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flat Design Illustration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ececec;
+            font-family: sans-serif;
+        }
+
+        /* Main square container */
+        .scene {
+            position: relative;
+            width: 520px;
+            height: 520px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.12),
+                0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Geometric diagonal background */
+        .background {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                    #d6336c 0%,
+                    #d6336c 50%,
+                    #10a7a2 50%,
+                    #10a7a2 100%);
+        }
+
+        /* Rotated yellow shape */
+        .yellow-back {
+            position: absolute;
+            width: 300px;
+            height: 220px;
+            background: #f4c430;
+            border-radius: 10px;
+            top: 135px;
+            left: 190px;
+            transform: rotate(15deg);
+            box-shadow:
+                0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        /* White card */
+        .card {
+            position: absolute;
+            width: 320px;
+            height: 260px;
+            background: white;
+            border-radius: 10px;
+            top: 130px;
+            left: 100px;
+            padding: 32px;
+            box-shadow:
+                0 18px 35px rgba(0, 0, 0, 0.15),
+                0 8px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Sun */
+        .sun {
+            width: 22px;
+            height: 22px;
+            background: #f4c430;
+            border-radius: 50%;
+            margin-bottom: 28px;
+        }
+
+        /* Mountain area */
+        .mountains {
+            position: relative;
+            width: 100%;
+            height: 110px;
+        }
+
+        /* Left mountain */
+        .mountain-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 70px solid #10a7a2;
+        }
+
+        /* Center mountain */
+        .mountain-center {
+            position: absolute;
+            bottom: 0;
+            left: 55px;
+            width: 0;
+            height: 0;
+            border-left: 85px solid transparent;
+            border-right: 85px solid transparent;
+            border-bottom: 95px solid #183b63;
+            z-index: 2;
+        }
+
+        /* Right mountain */
+        .mountain-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 120px solid #10a7a2;
+        }
+
+        /* Placeholder lines */
+        .line {
+            height: 12px;
+            background: #e5e5e5;
+            border-radius: 999px;
+            margin-top: 18px;
+        }
+
+        .line.short {
+            width: 60%;
+        }
+
+        .line.long {
+            width: 85%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+
+        <div class="background"></div>
+
+        <div class="yellow-back"></div>
+
+        <div class="card">
+
+            <div class="sun"></div>
+
+            <div class="mountains">
+                <div class="mountain-left"></div>
+                <div class="mountain-center"></div>
+                <div class="mountain-right"></div>
+            </div>
+
+            <div class="line long"></div>
+            <div class="line short"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

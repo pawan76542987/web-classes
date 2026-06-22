@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faculty</title>
+
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background-color: #f4f4f4;
+        padding: 30px;
+    }
+
+    h1{
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .faculty-card{
+        background-color: white;
+        width: 350px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    .faculty-card h3{
+        margin: 10px 0;
+        color: #444;
+    }
+
+    .faculty-card:hover{
+        transform: translateY(-5px);
+        transition: 0.3s;
+    }
+    </style>
+</head>
+<body>
+
+<h1>Faculty's Profile</h1>
+
+<% allFaculty.forEach((element) => { %>
+
+    <h3><%= element.name %></h3>
+    <h3><%= element.salary %></h3>
+    <h3><%= element.role %></h3>
+
+<% }) %>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+.afterhover {
+    background-color: aqua;
+    border: 2px solid black;
+}
+.circle {
+    border-radius: 50%;
+    border: 2px solid rgb(106, 24, 178);
+}

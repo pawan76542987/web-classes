@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Google Keep</h1>
+    <hr>
+    <form action="/insertdata" method="POST">
+        <input name="title">
+        <br>
+        <input name="description">
+        <br>
+        <button>Submit</button>
+    </form>
+    <hr>
+    <% notes.forEach((note) => { %>
+
+        <h3><%= note.title %></h3>
+        <p><%= note.description %></p>
+
+    <% }) %>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f3f4;
+        }
+
+        .note-form {
+            width: 500px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        .notes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            width: 250px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="note-form">
+
+        <form action="/insertdata" method="POST">
+
+            <input type="text" name="title" placeholder="Title">
+
+            <input type="text" name="description" placeholder="Take a note...">
+
+            <button>Add Note</button>
+
+        </form>
+
+    </div>
+
+    <div class="notes">
+
+        <% notes.forEach((note)=>{ %>
+
+            <div class="card">
+
+                <h3>
+                    <%= note.title %>
+                </h3>
+
+                <p>
+                    <%= note.description %>
+                </p>
+
+            </div>
+
+            <% }) %>
+
+    </div>
+
+</body>
+
+</html>

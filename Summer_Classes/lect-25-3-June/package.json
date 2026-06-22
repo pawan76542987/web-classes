@@ -1,0 +1,18 @@
+{
+  "name": "lect-25-3-june",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "calculator"
+  ],
+  "author": "Anushka",
+  "license": "ISC",
+  "description": "",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0"
+  }
+}
